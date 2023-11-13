@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'joy';
+  src: url('/src/fonts/Joyful.otf') format('opentype');
+  /* You can add more font properties if needed */
+}
+
+body {
+  cursor: url('/src/images/bg.gif'), auto;
+}
+
+
+
+
+
+
+html, .background {
+  /* background-color: grey; */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+}
+
+
+.background {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-size: 100% auto; /* Set the width to 100% and maintain the original height */
+  background-repeat: no-repeat;
+  background-image: url("/src/images/bg2.gif");
+}
+
+
+
+
+@keyframes flashing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.textMain {
+  margin: auto;
+  /* font-family: 'Bebas Neue'; */
+  padding: 10px;
+  font-size: 15px;
+  color: whitesmoke;
+  /* font-family: 'main-text' */
+}
+
+@keyframes bounceAround {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(800px);
+  }
+}
+
+.floating-img {
+  position: fixed;
+  cursor: pointer;
+  padding: 10px;
+  animation: bounceAround 3s infinite;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+.falling-image {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fallAnimation 4s linear infinite;
+}
+
+@keyframes fallAnimation {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: .5;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-image {
+  animation: rotate 9s linear infinite;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the grid horizontally */
+}
+
+.center-img {
+  width: 400px; /* Adjust the width and subtract margin */
+  height: 500px;
+  margin: 10px; /* Add margin for spacing */
+  animation: popUp 0.5s ease-in-out; /* Add a pop-up animation */
+
+
+}
+
+/* Display images in a column on mobile */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .center-img {
+    width: 80%; /* Adjust the width as needed for mobile */
+    margin: 10px; /* Add margin for spacing */
+  }
+}
+
+.center-img:hover {
+  transform: scale(1.1); 
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5); /* Start small */
+    opacity: 0; /* Initially hidden */
+  }
+  100% {
+    transform: scale(1); /* Pop up to full size */
+    opacity: 1; /* Fully visible */
+  }
+}
+

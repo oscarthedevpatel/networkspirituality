@@ -1,0 +1,17 @@
+.falling-image {
+    position: fixed;
+    top: -100px; /* Initial position above the viewport */
+    opacity: 1; /* Hide the image initially */
+  }
+  
+  @keyframes fallingAnimation {
+    0% {
+      transform: translateY(-100vh); /* Start position above the viewport */
+      opacity: 1; /* Fade in the image */
+    }
+    100% {
+      transform: translateY(100vh); /* End position below the viewport */
+      opacity: 0; /* Fade out the image */
+    }
+  }
+  

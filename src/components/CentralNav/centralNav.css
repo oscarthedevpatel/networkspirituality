@@ -1,0 +1,30 @@
+.image-gallery-container {
+    position: relative;
+  }
+  
+  .image-container {
+    transition: filter 0.5s;
+  }
+  
+  .image-container.blurred {
+    filter: blur(5px);
+  }
+  
+  .thumbnails {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    top: 20%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the thumbnails */
+  }
+  
+  .thumbnails img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    margin: 15px
+    /* Add additional styling for thumbnails as needed */
+  }
+  
