@@ -9,7 +9,7 @@ const ImageGenerator = () => {
       if (pillCounter < pillMax) {
         const pill = document.createElement("img");
         pillCounter++;
-        pill.src = process.env.PUBLIC_URL + "/images/burger.png";
+        pill.src = process.env.PUBLIC_URL + "/images/reallogo.png";
         pill.style.position = "fixed";
         pill.style.top = "0";
         pill.style.left = `${Math.random() * window.innerWidth}px`;

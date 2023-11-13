@@ -29,8 +29,9 @@ const ImageGallery = () => {
         onClick={handleImageClick}
       >
         <img
-          src={process.env.PUBLIC_URL + "/images/logo.png"}
+          src={process.env.PUBLIC_URL + "/images/newLogo.png"}
           alt="Gallery"
+          className="mainImage"
         />
         
       </div>
