@@ -1,72 +1,75 @@
 @font-face {
-    font-family: 'joy';
-    src: url('/src/fonts/Hangyaku.ttf') format('opentype');
-    /* You can add more font properties if needed */
-  }
+  font-family: 'joy';
+  src: url('/src/fonts/Hangyaku.ttf') format('opentype');
+  /* You can add more font properties if needed */
+}
 
 .image-gallery-container {
-    position: relative;
-  }
-  
-  .image-container {
-    transition: filter 0.5s;
-  }
-  
-  .image-container.blurred {
-    filter: blur(5px);
-  }
+  position: relative;
+}
 
-  .mainImage {
-    height: 35%;
-    width: 35%;
-  }
-  
-  .thumbnails {
-    position: absolute;
-    display: flex;
-    margin-top: 10px;
-    top: 20%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-  }
-  
-  .thumbnails img {
-    width: 20vh;
-    height: 20vh;
-    cursor: pointer;
-    margin: 15px
-    /* Add additional styling for thumbnails as needed */
-  }
-  
-  .thumbnail-text {
-    text-align: center;
-    margin-top: 0px; /* Adjust as needed */
-    font-family: 'joy';
-    color: red;
-    font-size: 2rem;
-    /* Add additional styling for thumbnail text as needed */
-  }
-  
-  .thumbnail-wrapper {
-    text-align: center;
-  }
+.image-container {
+  transition: filter 0.5s;
+}
 
+.image-container.blurred {
+  filter: blur(5px);
+}
 
-  @media (max-width: 768px) {
-    .mainImage {
-      height: 65%;
-      width: 65%;
-    }
+.mainImage {
+  height: 35%;
+  width: 35%;
+}
 
+.thumbnails {
+  position: absolute;
+  display: flex;
+  margin-top: 10px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thumbnails img {
+  width: 20vh;
+  height: 20vh;
+  cursor: pointer;
+  margin: 15px; /* Added missing semicolon */
+  /* Add additional styling for thumbnails as needed */
+}
+
+.thumbnail-text {
+  text-align: center;
+  margin-top: 0px; /* Adjust as needed */
+  font-family: 'joy';
+  color: red;
+  font-size: 2rem;
+  transition: color 0.5s; /* Added transition for color change */
+  /* Add additional styling for thumbnail text as needed */
+}
+
+.thumbnail-wrapper {
+  text-align: center;
+  cursor: pointer;
+  &:hover {
     .thumbnail-text {
-      font-size: 20px;
+      color: white; /* Change text color on hover */
     }
-
-    .thumbnails img {
-      width: 15vh;
-      height: 15vh;
-
-    }
-  
   }
-  
+}
+
+@media (max-width: 768px) {
+  .mainImage {
+    height: 65%;
+    width: 65%;
+  }
+
+  .thumbnail-text {
+    font-size: 20px;
+  }
+
+  .thumbnails img {
+    width: 15vh;
+    height: 15vh;
+  }
+}

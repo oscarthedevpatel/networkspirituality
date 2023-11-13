@@ -5,21 +5,20 @@ const ImageGallery = () => {
   const [isBlurred, setIsBlurred] = useState(false);
 
   const galleryImages = [
-    { src: process.env.PUBLIC_URL + "/images/girl1.png", text: "Telegram" },
-    { src: process.env.PUBLIC_URL + "/images/girl2.png", text: "Chart" },
-    { src: process.env.PUBLIC_URL + "/images/girl3.png", text: "Twitter" },
-    // { src: process.env.PUBLIC_URL + "/images/girl4.png", text: "Knowledge" },
+    { src: process.env.PUBLIC_URL + "/images/girl1.png", text: "Telegram", link: "https://t.me/brospirit" },
+    { src: process.env.PUBLIC_URL + "/images/girl2.png", text: "Chart", link: "https://www.dextools.io/app/en/ether/pair-explorer/0x3b8cebbaece24136f7e0f0d6863e18ee048152c0" },
+    { src: process.env.PUBLIC_URL + "/images/girl3.png", text: "Twitter", link: "https://twitter.com/brospirit444" },
+    // { src: process.env.PUBLIC_URL + "/images/girl4.png", text: "Knowledge", link: "/knowledge" },
   ];
 
   const handleImageClick = () => {
     setIsBlurred((prevIsBlurred) => !prevIsBlurred);
   };
 
-  const handleThumbnailClick = () => {
-    // Handle thumbnail click logic here
-    // For example, you could navigate to a new image or perform other actions
+  const handleThumbnailClick = (index) => {
+    const selectedImage = galleryImages[index];
+    window.open(selectedImage.link, '_blank'); // Open the link in a new tab or window
     setIsBlurred(false);
-
   };
 
   return (
@@ -33,7 +32,6 @@ const ImageGallery = () => {
           alt="Gallery"
           className="mainImage"
         />
-        
       </div>
       {isBlurred && (
         <div className="thumbnails">
