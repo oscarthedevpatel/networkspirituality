@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'joy';
-  src: url('/src/fonts/Joyful.otf') format('opentype');
+  src: url('/src/fonts/Hangyaku.ttf') format('opentype');
   /* You can add more font properties if needed */
 }
 
@@ -27,7 +27,18 @@ html, body, .background {
   background-image: url("/src/images/bg2.gif");
 }
 
+.contract {
+  font-family: 'joy';
+  font-size: 50px;
+  color: rgb(17, 62, 165);
+  background-color: white;
+}
 
+.column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 @keyframes flashing {
   0% {
@@ -131,6 +142,11 @@ html, body, .background {
   .center-img {
     width: 80%; /* Adjust the width as needed for mobile */
     margin: 10px; /* Add margin for spacing */
+  }
+
+  .contract {
+    font-size: 23px;
+   
   }
 }
 
