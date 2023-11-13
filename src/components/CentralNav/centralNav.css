@@ -31,8 +31,8 @@
   }
   
   .thumbnails img {
-    width: 150px;
-    height: 150px;
+    width: 20vh;
+    height: 20vh;
     cursor: pointer;
     margin: 15px
     /* Add additional styling for thumbnails as needed */
@@ -43,10 +43,30 @@
     margin-top: 0px; /* Adjust as needed */
     font-family: 'joy';
     color: red;
-    font-size: 60px;
+    font-size: 2rem;
     /* Add additional styling for thumbnail text as needed */
   }
   
   .thumbnail-wrapper {
     text-align: center;
   }
+
+
+  @media (max-width: 768px) {
+    .mainImage {
+      height: 65%;
+      width: 65%;
+    }
+
+    .thumbnail-text {
+      font-size: 20px;
+    }
+
+    .thumbnails img {
+      width: 15vh;
+      height: 15vh;
+
+    }
+  
+  }
+  
