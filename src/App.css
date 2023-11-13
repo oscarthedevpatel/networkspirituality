@@ -9,28 +9,23 @@ body {
 }
 
 
-
-
-
-
-html, .background {
-  /* background-color: grey; */
+html, body, .background {
   align-items: center;
   justify-content: center;
   height: 100%;
-
+  margin: 0; /* Reset margin to ensure full width and height */
+  overflow: hidden; /* Hide any potential horizontal scroll bar */
 }
-
 
 .background {
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-size: 100% auto; /* Set the width to 100% and maintain the original height */
+  display: flex;
+  height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/src/images/bg2.gif");
 }
-
 
 
 
